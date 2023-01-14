@@ -1,3 +1,25 @@
+
+
+## Student notes
+1. How you acheived the goals of the project
+Goal of project is to sign a transaction instead of using direct private keys to send funds
+use keccek hash of transaction and private key to prove what sender wanted to sending
+
+errors in importing secp256k1 into front end prevented from completing 
+
+intended goal is to have fields in front end to create a signature using addresses and amount and input them to be hashed with private key
+
+  const signature = await secp.sign(messageHash, privateKey);
+
+verify on other side pass between client to server the hash and publickey and signature match
+
+  const isSigned = secp.verify(signature, messageHash, publicKey);
+
+
+2. server side script to generate eth private keys and public key addresses in server scripts
+
+
+
 ## ECDSA Node
 
 This project is an example of using a client and server to facilitate transfers between different addresses. Since there is just a single server on the back-end handling transfers, this is clearly very centralized. We won't worry about distributed consensus for this project.
