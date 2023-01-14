@@ -1,8 +1,16 @@
 import server from "./server";
 
-import * as secp from 'ethereum-cryptography/secp256k1';
+//ES5 vs ES6
+// USE REQUIRE INSTEAD OF IMPORT
+
+//import * as secp from 'ethereum-cryptography/secp256k1';
 //import secp from "/ethereum-cryptography/secp256k1";
-import {toHex} from "/ethereum-cryptography/utils";
+
+//const { createPrivateKeySync, ecdsaSign } = require("ethereum-cryptography/secp256k1");
+//const toHex = require("ethereum-cryptography/utils");
+//const secp = require("ethereum-cryptography/secp256k1");
+
+//import {toHex} from "/ethereum-cryptography/utils";
 
 function Wallet({ address, setAddress, balance, setBalance, privateKey, setPrivateKey }) {
   async function onChange(evt) {
